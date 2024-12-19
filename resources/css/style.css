@@ -1,0 +1,285 @@
+body{
+    background-image: linear-gradient( to right ,rgb(99, 72, 184) 0%, rgb(61, 40, 106) 50%,rgb(93, 42, 63) 100% );
+    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    
+   
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -40px;
+    width: 50px;
+}
+.logo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo h1{
+    color: rgb(209, 190, 247);
+    font-size: 40px;
+    margin-bottom: 17px;
+    text-shadow:8px 17px rgb(61, 40, 106);
+}
+.links{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links ul{
+    display: flex;
+   
+    gap:15px;
+}
+.links li{
+    
+    list-style: none;
+   
+}
+.links a{
+
+    color: rgb(209, 190, 247);
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+  
+    
+}
+.profile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile i{
+    font-size: 20px;
+    color:  rgb(209, 190, 247) ;
+}
+/* end navbar */
+/* start header */
+.header-custom{
+     
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.header_first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+    height: 100%;
+    width: 300%;
+  padding: 15px;
+    border-top: 1px solid rgb(209, 190, 247) ;
+}
+
+
+.articles_section{
+ height: 100%;
+ width: 40%;
+ margin-right:-10px;
+ display: flex;
+ flex-direction: column ;
+ 
+}
+/* card custom */
+.articles_card{
+    border-bottom: 1px solid  rgb(209, 190, 247) ;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+ 
+}
+.small_article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 25px;
+     gap: 20px;
+}
+.body_small_article{
+    width: 70%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+   
+}
+.body_small_article h5 , h4{
+    color: rgb(209, 190, 247) ;
+}
+.img_small_article{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+.img_small_article img{
+    width: 100px;
+}
+
+.icons_small_article{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.icon_one {
+    
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: 30px;
+    width: 50%;
+}
+.icon_two{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+.icon_one i, .icon_two i{
+    color:rgb(209, 190, 247);
+    font-size: 20px;
+}
+/* end card cuastom */
+
+/* big article */
+.total_article{
+    /* background-color: black; */
+   
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total_article_article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+  
+}
+.total_article_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.total_article_img img{
+    margin-top: 90px;
+    width: 70%;
+    
+
+}
+.total_article_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+.total_article_body h5{
+    font-size: 15px;
+    color:rgb(209, 190, 247) ;
+}
+.total_article_body h2 , p{
+    color:rgb(209, 190, 247) ;
+}
+/* fine articolo */
+/* header due */
+.header_second{
+    height: 100%;
+    border-left: 1px solid  rgb(209, 190, 247) ;
+    display: flex;
+    align-items: center;
+  gap: 20px;
+    flex-direction: column;
+ 
+
+}
+.header_second h3{
+    height: 100%;
+    color:  rgb(209, 190, 247) ;
+ 
+
+} 
+.frasi_wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frase{
+   
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgb(209, 190, 247) ;
+}
+
+/* form  aggiunta articolo*/
+.form-custom{
+    border: 1px solid  rgb(209, 190, 247) ;
+    padding: 30px;
+}
+
+/* page articoli */
+
+.article_wrapper{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+/* dettagliuo articoli */
+.article_detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
