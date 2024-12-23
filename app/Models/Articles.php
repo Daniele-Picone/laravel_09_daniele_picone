@@ -14,7 +14,8 @@ class Articles extends Model
         'title',
         'category',
         'article',
-        'autore'
+        'autore',
+        'img'
 
 
 

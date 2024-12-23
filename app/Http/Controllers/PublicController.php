@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ArticlesRequest;
 use App\Models\Articles;
 use Illuminate\Http\Request;
 
@@ -10,24 +11,34 @@ class PublicController extends Controller
 
 
 
-public function store(Request $request) {
+public function store(ArticlesRequest $request) {
     
     $title= $request->title;
     $category = $request->category;
     $articleBody = $request->article;
     $autore= $request->autore;
-    
+    $img = null;
+        
+    if($request->file('img')){
+
+        $img = $request->file('img')->store('img', 'public');
+    }
+
+ 
     
         $article = new Articles();
         $article->title =$title;
         $article->category = $category;
         $article->article =$articleBody;
         $article->autore = $autore;
+        $article->img = $img;
+
+        
         
 
         $article->save();
         
-        return redirect(route('articles'));
+        return redirect(route('articles'))->with('message', 'Articolo inserito correttamente');  
         
         
         

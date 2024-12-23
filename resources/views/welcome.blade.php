@@ -16,7 +16,7 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus delectus ipsa maxime excepturi corrupti illum a! Hic amet illum in. Nemo repudiandae reiciendis harum sit corrupti quam minus repellat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam natus sit cumque, in adipisci nam facere nisi ea numquam! Sit dolor, quos praesentium reiciendis iste iusto quo voluptas minus. Lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus delectus ipsa maxime excepturi corrupti illum a! Hic amet illum in. Nemo repudiandae reiciendis harum sit corrupti quam minus repellat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam natus sit cumque, in adipisci nam facere nisi ea numquam! Sit dolor, quos praesentium reiciendis iste iusto quo voluptas minus. Lorem</p>
 
-            <h3>autore</h3>
+            <h3></h3>
 
 
         </div>
@@ -40,7 +40,7 @@
                 <h4>{{$article->title}}</h4>
             </div>
             <div class="img_small_article">
-                <img src="https://picsum.photos/300/200" alt="">
+                <img src="{{Storage::url($article->img)}}" alt="">
             </div>
         </div>
         <div class="icons_small_article">

@@ -1,18 +1,24 @@
 <x-layout>
 
-   <div class="container article_detail">
-       
-       <h1 class="text-center" >{{$article->title}}</h1>
+<div class="container article_detail">
 
-       <img src="https://picsum.photos/300/200" alt="">
+<div class="row justify-content-center align-items-center ">
+<div class="col-12 col-md-6  detail_img ">
 
-       <h4>{{$article->category}}</h4>
-
-       <p>{{$article->article}}</p>
-
-       <h5>{{$article->autore}}</h5>
-
+   <img src="{{Storage::url($article->img)}}" alt="">
 
    </div>
+    <div class="col-12 col-md-6 detail_body">
+    <h1 class="text-center" >{{$article->title}}</h1>
+    <h4>{{$article->category}}</h4>
+    <p>{{$article->article}}</p>
+    <h5>{{$article->autore}}</h5>
+</div>
+
+
+</div>
+
+
+</div>
 
 </x-layout>
