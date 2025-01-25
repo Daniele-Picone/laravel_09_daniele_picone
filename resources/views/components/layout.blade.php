@@ -12,5 +12,7 @@
 
 
     {{$slot}}
+
+    <script src="https://kit.fontawesome.com/2b8422c872.js" crossorigin="anonymous"></script>
 </body>
 </html>

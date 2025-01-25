@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ArticlesRequest;
 use App\Models\Articles;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use App\Http\Requests\ArticlesRequest;
 
 class PublicController extends Controller
 {
@@ -73,5 +74,14 @@ public function store(ArticlesRequest $request) {
             
         }
 
-    
+       public function lounge(){
+
+        return view('lounge');
+    }
+
+  
+
+
+
+
 }
