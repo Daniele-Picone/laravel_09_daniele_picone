@@ -45,6 +45,7 @@ public function store(ArticlesRequest $request) {
         
     }
     public function homepage(){
+       
     
     
         $article = Articles::all();
@@ -79,8 +80,38 @@ public function store(ArticlesRequest $request) {
         return view('lounge');
     }
 
-  
+    public function edit($id){
+        $article = Articles::find($id);
+        return view('articolo.update', ['article'=>$article]);
+    }
+    public function update(Request $request, $id)
+    {
+        $article = Articles::find($id);
 
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'article' => 'required|string',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $article->update([
+            'title' => $request->title,
+            'category' => $request->category,
+            'article' => $request->article,
+            'img' => $request->hasFile('img') ? $request->file('img')->store('img', 'public') : $article->img,
+        ]);
+
+        return redirect()->route('articles')->with('message', 'Articolo aggiornato con successo!');
+    }
+
+  
+    public function delete($id)
+    {
+        $article = Articles::find($id);
+        $article->delete();
+        return redirect()->back()->with('message', 'Articolo eliminato correttamente');
+    }
 
 
 
