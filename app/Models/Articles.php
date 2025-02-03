@@ -15,9 +15,13 @@ class Articles extends Model
         'category',
         'article',
         'autore',
-        'img'
+        'img',
+        'user_id'
 
 
 
     ];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

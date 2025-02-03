@@ -25,3 +25,10 @@ Route::put('/article/update/{id}', [PublicController::class, 'update'])->name('a
 
 // Rotte per cancellare articolo
 Route::delete('/article/delete/{id}', [PublicController::class, 'delete'])->name('articles.delete');
+
+// annunci 
+Route::get('/aggiungiAnnunci', [PublicController::class, 'annunci_form'])->name('annunci.form')->middleware('auth');
+Route::post( '/annunci/create' , [PublicController::class, 'annunci_storage'])->name('annunci.storage');
+Route::get('annunci' , [PublicController::class, 'annunci'])->name('annunci');
+
+Route::delete('/annunci/delete/{id}', [PublicController::class, 'delete_annunci'])->name('annunci.delete');

@@ -7,9 +7,16 @@
         <ul>
             <li><a href="{{route('homepage')}}">Homepage</a></li>
             <li><a href="{{route('articles')}}">Articoli</a></li>
+            
             @auth
             <li><a href="{{route('add.articles')}}">Aggiungi articolo</a></li>
             <li class="nav-item">
+            <li><a href="{{route('annunci.form')}}">Crea Annuncio</a></li>   
+
+
+
+
+
           <form 
            action="{{route('logout')}}"
            method="POST"> 
@@ -30,6 +37,7 @@
     <p>Accedi/Registrati</p>
     @endguest
     @auth
+    <li><a href="{{route('annunci')}}">I tuoi Annunci </a></li>  
     <p><a class="nav-link" href="#">{{Auth::user()->name}}
     </a></p>
     @endauth

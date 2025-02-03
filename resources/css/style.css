@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb {
     align-items: center;
     position: relative;
     left: -240px;
-    width: 50px;
+    width: 60px;
 }
 .logo{
     height: 100%;
@@ -85,6 +85,15 @@ html::-webkit-scrollbar-thumb {
     gap: 25px;
     
 }
+.profile li{
+    list-style: none;
+}
+.profile a{
+    text-decoration: none;
+    color: rgb(209, 190, 247);
+ 
+    
+}
 .profile p{
     
     margin-top: 20px;
@@ -126,7 +135,7 @@ html::-webkit-scrollbar-thumb {
  flex-direction: column ;
  
 }
-.articles-wrapper {
+.announcement-wrapper {
     overflow-y: auto;
     height: 90%;
     display: flex;
@@ -134,20 +143,20 @@ html::-webkit-scrollbar-thumb {
     scroll-behavior: smooth;
     padding: 10px;
 }
-.articles-wrapper::-webkit-scrollbar {
+.announcement-wrapper::-webkit-scrollbar {
     width: 7px; 
     margin-left: ;
     background: transparent ;
     scrollbar-color: rgb(61, 40, 106);
 }
-.articles-wrapper::-webkit-scrollbar-thumb {
+.announcement-wrapper::-webkit-scrollbar-thumb {
     background: rgb(61, 40, 106);
     border-radius: 10px;
 }
 
 
 /* card custom */
-.articles_card{
+.announcement_card{
     border-bottom: 1px solid  rgb(209, 190, 247) ;
    width: 100%;
    display: flex;
@@ -157,7 +166,7 @@ html::-webkit-scrollbar-thumb {
  
 }
 
-.small_article{
+.small_announcement{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +174,7 @@ html::-webkit-scrollbar-thumb {
     padding: 25px;
      gap: 20px;
 }
-.body_small_article{
+.body_small_announcement{
     width: 70%;
    
     display: flex;
@@ -174,28 +183,29 @@ html::-webkit-scrollbar-thumb {
     justify-content: center;
    
 }
-.body_small_article h5 , h4{
+.body_small_announcement h5 , h4{
     color: rgb(209, 190, 247) ;
 }
-.img_small_article{
+.img_small_announcement{
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4px;
 }
-.img_small_article img{
+.img_small_announcement img{
     width: 100%;
     height: 80px;
 }
 
-.icons_small_article{
+.icons_small_announcement{
     display: flex;
     height: 40px;
     justify-content: space-between;
     align-items: center;
    
 }
+
 .icon_one {
     
     display: flex;

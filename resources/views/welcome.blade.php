@@ -31,20 +31,21 @@
 
 
   <div class="articles_section">
-   
-  <div class="articles-wrapper">
-  @foreach ($articles as $article )
-   <div id="articlesCards" class="articles_card">
-        <div class="small_article">
-            <div class="body_small_article">
-                <h5>{{$article->category}}</h5>
-                <h4>{{$article->title}}</h4>
+       <h3 class=" text-center" >I NOSTRI ANNUNCI</h3>
+  <div class="announcement-wrapper">
+  @foreach ($annunci as $annuncio )
+   <div id="announcementCards" class="announcement_card">
+        <div class="small_announcement">
+            <div class="body_small_announcement">
+                <h4>{{$annuncio->title}}</h4>
+                <h5>{{$annuncio->price}} €</h5>
+                <p>{{$annuncio->user->name}}</p>
             </div>
-            <div class="img_small_article">
-                <img src="{{Storage::url($article->img)}}" alt="">
+            <div class="img_small_announcement">
+                <img src="{{Storage::url($annuncio->img)}}" alt="">
             </div>
         </div>
-        <div class="icons_small_article">
+        <div class="icons_small_announcement">
          <div class="icon_one">
          <i class="bi bi-headphones"></i>
          <i class="bi bi-chat-left-dots"></i>
