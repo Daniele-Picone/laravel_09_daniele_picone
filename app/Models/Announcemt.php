@@ -19,6 +19,7 @@ class Announcemt extends Model
         'annunciamentBody',
         'img',
         'price',
+        'autore',
         'user_id'
     ];
 

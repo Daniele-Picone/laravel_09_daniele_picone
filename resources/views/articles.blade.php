@@ -15,14 +15,18 @@
                  <h5 class="card-title">{{$article->title}}</h5>
                  <p class="card-text"></p>{{$article->article}}</p>
                  <p class="card-text"></p>{{$article->user->name}}</p>
-                <a href="{{route('article.detail', ['id'=> $article['id']])}}" class="btn btn-primary">leggi di piu</a>
-                <a href="{{route('article.edit', ['id'=> $article['id']] )}}" class="btn btn-primary">modifica</a>
-
-                <form action="{{ route('articles.delete', ['id' => $article->id]) }}" method="POST" ">
+                 <a href="{{route('article.detail', ['id'=> $article['id']])}}" class="btn btn-primary">leggi di piu</a>
+                 @auth
+                 
+                 <a href="{{route('article.edit', ['id'=> $article['id']] )}}" class="btn btn-primary">modifica</a>
+                 <form action="{{ route('articles.delete', ['id' => $article->id]) }}" method="POST" ">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn delete btn-danger">Elimina</button>
               </form>
+                 @endauth
+
+                
            </div>
          </div>
             

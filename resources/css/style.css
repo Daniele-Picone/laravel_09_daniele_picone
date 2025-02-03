@@ -45,6 +45,9 @@ html::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
 }
+.logo a {
+    text-decoration: none;
+}
 .logo h1{
     color: rgb(209, 190, 247);
     font-size: 40px;

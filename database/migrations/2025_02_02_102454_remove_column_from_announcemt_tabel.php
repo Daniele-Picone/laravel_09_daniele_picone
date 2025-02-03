@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('announcemt', function (Blueprint $table) {
-            $table->dropColumn('autore');
+            $table->dropColumn('autore'); // Rimuove la colonna 'autore'
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('announcemt', function (Blueprint $table) {
-            $table->text('autore');
+            $table->string('autore'); // Aggiunge di nuovo la colonna 'autore' in caso di rollback
         });
     }
 };

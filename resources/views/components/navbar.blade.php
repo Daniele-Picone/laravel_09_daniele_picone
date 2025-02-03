@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="start">
     <div class="logo">
-        <h1>CyberNexus</h1>
+       <a href="{{route('homepage')}}"><h1>CyberNexus</h1></a>
     </div>
     <div class="links">
         <ul>

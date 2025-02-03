@@ -21,7 +21,6 @@ public function store(ArticlesRequest $request) {
     $title= $request->title;
     $category = $request->category;
     $articleBody = $request->article;
-    $autore= $request->autore;
     $img = null;
         
     if($request->file('img')){
@@ -35,7 +34,6 @@ public function store(ArticlesRequest $request) {
         $article->title =$title;
         $article->category = $category;
         $article->article =$articleBody;
-        $article->autore = $autore;
         $article->img = $img;
         $article->user_id = Auth::user()->id;
 
