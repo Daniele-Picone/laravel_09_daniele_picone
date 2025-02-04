@@ -5,24 +5,7 @@
 <div class="container   header_first">
 
 <div id="bigArticlesWrapper" class="total_article">
-    <div  class="total_article_article">
-        <div class="total_article_img">
-            <img src="https://picsum.photos/300/200" alt="">
-        </div>
-
-        <div class="total_article_body">
-            <h5>categoria</h5>
-            <h2>titolo</h2>
-
-            <p>body</p>
-
-            <h3>autore</h3>
-
-
-        </div>
-
-
-    </div>
+   
 
 </div>
 
@@ -34,11 +17,20 @@
        <h3 class=" text-center" >I NOSTRI ANNUNCI</h3>
   <div class="announcement-wrapper">
   @foreach ($annunci as $annuncio )
-   <div id="announcementCards" class="announcement_card">
+   <div id="announcementCards" class="announcement_card" data-id="{{ $annuncio->id }}" data-title="{{ $annuncio->title }}" data-description="{{ $annuncio->annunciamentBody }}" data-price="{{ $annuncio->price }}" data-user="{{ $annuncio->user->name }}"   >
         <div class="small_announcement">
             <div class="body_small_announcement">
                 <h4>{{$annuncio->title}}</h4>
                 <h5>{{$annuncio->price}} €</h5>
+                @if ($annuncio->tags->isNotEmpty())
+                <div class="mb-3">
+                @foreach ($annuncio->tags as $tag )
+                     <span class="badge text-bg-primary">#{{$tag->name}}</span>
+                @endforeach
+                </div>
+                 
+                
+               @endif
                 <p>{{$annuncio->user->name}}</p>
             </div>
             <div class="img_small_announcement">
@@ -55,7 +47,7 @@
          <i id="save" class="fa-solid fa-bookmark"></i>
          </div>
         </div>
-
+       
     </div>
    
    @endforeach
@@ -84,5 +76,13 @@
 
 
 </header>
-    
+<script>
+        function loadAnnuncio(id) {
+            fetch(`/annunci/${id}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('annuncio-details').innerHTML = html;
+                });
+        }
+    </script>
 </x-layout>

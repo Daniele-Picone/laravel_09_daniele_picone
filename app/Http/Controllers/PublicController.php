@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Articles;
 use App\Models\Announcemt;
 use App\Models\Announcement;
@@ -63,7 +64,9 @@ public function store(ArticlesRequest $request) {
 
     public function showForm(){
 
-        return view('addarticles');}
+      
+        return view('addarticles');
+    }
 
     public function articles(){
         $article = Articles::all();
@@ -120,7 +123,8 @@ public function store(ArticlesRequest $request) {
     }
 
     public function annunci_form(){
-        return view('annunci.addAnnunci');
+        $tags = Tag::all();
+        return view('annunci.addAnnunci',compact('tags'));
     }
     public function annunci()
     {
@@ -141,7 +145,7 @@ public function store(ArticlesRequest $request) {
             $img = $request->file('img')->store('img', 'public');
         }
 
-        Announcemt::create([
+         $announcemt = Announcemt::create([
             'title' => $title,
             'annunciamentBody' => $annunciamentBody,
             'price' => $price,
@@ -151,18 +155,22 @@ public function store(ArticlesRequest $request) {
     
 
         
-        
 
        
-        
+        $announcemt->tags()->attach($request->tags);
         return redirect(route('annunci'))->with('message', 'Annuncio inserito correttamente');  
         
     
         
         
     }
+    public function annunci_edit(Announcemt $announcemt){
+        $announcemt = Announcemt::find($announcemt->id);
+        $tags = Tag::all();
+        return view('annunci.edit', compact('announcemt', 'tags'));;
+    }
 
-
+ 
    public function delete_annunci($id)
     {
         $annunciament = Announcemt::find($id);

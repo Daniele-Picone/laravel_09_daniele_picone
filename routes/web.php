@@ -31,4 +31,6 @@ Route::get('/aggiungiAnnunci', [PublicController::class, 'annunci_form'])->name(
 Route::post( '/annunci/create' , [PublicController::class, 'annunci_storage'])->name('annunci.storage');
 Route::get('annunci' , [PublicController::class, 'annunci'])->name('annunci');
 
+
+
 Route::delete('/annunci/delete/{id}', [PublicController::class, 'delete_annunci'])->name('annunci.delete');

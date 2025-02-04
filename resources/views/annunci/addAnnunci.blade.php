@@ -43,7 +43,23 @@
                      <label for="price" class="form-label">Inserisci prezzo</label>
                      <input type="text" class="form-control" id="price" aria-describedby="emailHelp" name="price"  >
                  </div>
-           
+
+                 <div class="mb-3">
+                 @foreach ($tags as $tag)
+                 <div class="form-check">
+                     <input name="tags[]" class="form-check-input" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault">
+                     <label class="form-check-label" for="flexCheckDefault">
+                      {{$tag->name}}
+                        </label>
+                       </div>
+
+
+
+                @endforeach
+
+
+
+                 </div>
 
              
   

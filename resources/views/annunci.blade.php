@@ -15,6 +15,17 @@
                  <h5 class="card-title">{{$annunciament->title}}</h5>
                  <p class="card-text">{{$annunciament->article}}</p>
                  <p class="card-text" >{{$annunciament->user->name}}</p>
+                 @if ($annunciament->tags->isNotEmpty())
+                <div class="mb-3">
+                @foreach ($annunciament->tags as $tag )
+                     <span class="badge text-bg-primary">#{{$tag->name}}</span>
+                @endforeach
+                </div>
+                 
+                
+               @endif
+
+             
                  <form action="{{ route('annunci.delete', ['id' => $annunciament->id]) }}" method="POST" ">
                             @csrf
                             @method('DELETE')
