@@ -25,7 +25,7 @@ class ArticlesRequest extends FormRequest
             'title'=> 'required ',
             'category'=> 'required ',
             'article'=> 'required' ,
-            'autore'=> 'required',
+          
             
           
         ];
@@ -40,7 +40,7 @@ class ArticlesRequest extends FormRequest
             'title.required'=> 'non hai inserito il nome del prodotto',
             'category.required'=> 'non hai inserito la categoria del prodotto',
             'article.required'=> 'non hai inserito la descrizione del prodotto',
-            'autore.required'=> 'non hai inserito chi ha scritto l\'articolo',
+            
 
 
         ];

@@ -37,10 +37,7 @@
                  <label for="text" class="form-label">Scrivi articolo</label>
                    <textarea name="article" cols="30" rows="10" id="text" class="form-control" ></textarea>
              </div>
-             <div class="mb-3">
-                     <label for="autore" class="form-label">Autore</label>
-                     <input type="text" class="form-control" id="autore" aria-describedby="emailHelp" name="autore" >
-             </div>
+            
              
   
                  <button type="submit" class="btn btn-primary">Modifica</button>

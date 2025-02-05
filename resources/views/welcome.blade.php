@@ -58,16 +58,10 @@
 </div>
 
 <div class="container  header_second">
-    <div class="header_due_title">
-    <h3> Frasi del Giorno</h3>
-    </div>
-    <div class="frasi_wrapper">
-    <div class="frase">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro itaque iure totam autem animi nam! Expedita vel placeat dolor, eius iusto inventore modi veniam, similique fuga, in voluptatum quisquam architecto!</p>
-        <h5>autore</h5>
-    </div>
-    </div>
-
+    
+   <livewire:counter>
+    
+   </livewire:counter>
 </div>
 
 
