@@ -16,32 +16,9 @@
 
     <div class="col-12 col-md-6">
 
-    <form class="rounded form-custom" method="POST" action="{{route('article.update',['id' => $article->id])}}" enctype="multipart/form-data">
-    @csrf
-    @method('PUT')
+ <livewire:edit-article :article=$article >
 
-
-
-                
-
-
-                 <div class="mb-3">
-                     <label for="title" class="form-label">Inserisci Titolo</label>
-                     <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="title" >
-                 </div>
-                 <div class="mb-3">
-                     <label for="category" class="form-label">Categotia</label>
-                     <input type="text" class="form-control" id="category" aria-describedby="emailHelp" name="category" >
-                 </div>
-              <div class="mb-3">
-                 <label for="text" class="form-label">Scrivi articolo</label>
-                   <textarea name="article" cols="30" rows="10" id="text" class="form-control" ></textarea>
-             </div>
-            
-             
-  
-                 <button type="submit" class="btn btn-primary">Modifica</button>
-    </form>
+ </livewire:edit-article>
 
     </div>
     </div>

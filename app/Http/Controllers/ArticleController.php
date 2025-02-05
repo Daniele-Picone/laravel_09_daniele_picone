@@ -51,40 +51,22 @@ class ArticleController extends Controller
             return view('articles', ['articles'=>$article] );
         }    
       
-        public function dettaglio($id){
+        public function dettaglio(Articles $article){
     
     
     
-            $article = Articles::find($id);
+            
     
      
-                    return view('articolo.dettaglio', ['article'=>$article] );
+                    return view('articolo.dettaglio',compact('article') );
                 
             }
             public function edit($id){
                 $article = Articles::find($id);
-                return view('articolo.update', ['article'=>$article]);
+                return view('articolo.update', compact('article'));
             }
-            public function update(Request $request, $id)
-            {
-                $article = Articles::find($id);
-        
-                $request->validate([
-                    'title' => 'required|string|max:255',
-                    'category' => 'required|string|max:255',
-                    'article' => 'required|string',
-                    'img' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                ]);
-        
-                $article->update([
-                    'title' => $request->title,
-                    'category' => $request->category,
-                    'article' => $request->article,
-                    'img' => $request->hasFile('img') ? $request->file('img')->store('img', 'public') : $article->img,
-                ]);
-        
-                return redirect()->route('articles')->with('message', 'Articolo aggiornato con successo!');
-            }
+            
+             
         
           
             public function delete($id)
